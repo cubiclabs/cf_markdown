@@ -1,6 +1,6 @@
 component{
 	/*
-	ColdFusoin wrapper for Atlassian commonmark-java
+	ColdFusion wrapper for Atlassian commonmark-java
 	https://github.com/atlassian/commonmark-java
 	*/
 
