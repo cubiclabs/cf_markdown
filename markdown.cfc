@@ -1,9 +1,7 @@
 component{
 	variables._jars = [];
 	variables._ext = {};
-	variables.parser = "";
-	variables.renderer = "";
-
+	
 	/**
 	* @hint constructor
 	*/
@@ -24,6 +22,9 @@ component{
 		variables._jars = local.jars;
 	}
 
+	/**
+	* @hint returns a struct that defines default extension settings
+	*/
 	public struct function defaultExtConfig(){
 		return {
 			autolink: false,
@@ -60,11 +61,11 @@ component{
 	* @hint defines extension objects so that we are not continuously creating them
 	*/
 	public void function defineExtensions(){
-		variables._ext["autolink"] = createObject("java", "org.commonmark.ext.autolink.AutolinkExtension", variables._jars).create();
-		variables._ext["strikethrough"] = createObject("java", "org.commonmark.ext.gfm.strikethrough.StrikethroughExtension", variables._jars).create();
-		variables._ext["tables"] = createObject("java", "org.commonmark.ext.gfm.tables.TablesExtension", variables._jars).create();
-		variables._ext["headingAnchor"] = createObject("java", "org.commonmark.ext.heading.anchor.HeadingAnchorExtension", variables._jars).create();
-		variables._ext["ins"] = createObject("java", "org.commonmark.ext.ins.InsExtension", variables._jars).create();
+		variables._ext["autolink"] = 		createObject("java", "org.commonmark.ext.autolink.AutolinkExtension", variables._jars).create();
+		variables._ext["strikethrough"] = 	createObject("java", "org.commonmark.ext.gfm.strikethrough.StrikethroughExtension", variables._jars).create();
+		variables._ext["tables"] = 			createObject("java", "org.commonmark.ext.gfm.tables.TablesExtension", variables._jars).create();
+		variables._ext["headingAnchor"] = 	createObject("java", "org.commonmark.ext.heading.anchor.HeadingAnchorExtension", variables._jars).create();
+		variables._ext["ins"] = 			createObject("java", "org.commonmark.ext.ins.InsExtension", variables._jars).create();
 	}
 
 	/**
