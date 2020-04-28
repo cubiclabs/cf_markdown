@@ -2,6 +2,7 @@ component{
 	/*
 	ColdFusion wrapper for Atlassian commonmark-java
 	https://github.com/atlassian/commonmark-java
+	https://github.com/robinst/autolink-java
 	*/
 
 	variables._jars = [];
