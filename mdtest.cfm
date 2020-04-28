@@ -41,7 +41,13 @@ writeOutput(out);
 
 
 local.markdown = new markdown();
-t = getTickCount();
-writeOutput(local.markdown.parse(local.md));
-writeOutput(getTickCount()-t & "ms");
+tTotal = 0;
+for(i=0; i<10; i++){
+	t = getTickCount();
+	parsed = local.markdown.parse(local.md);
+	writeOutput(parsed);
+	tTotal += getTickCount()-t;
+	writeOutput(getTickCount()-t & "ms");
+}
+writeOutput((tTotal/10) & "ms");
 </cfscript>
