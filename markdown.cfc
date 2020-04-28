@@ -1,4 +1,9 @@
 component{
+	/*
+	ColdFusoin wrapper for Atlassian commonmark-java
+	https://github.com/atlassian/commonmark-java
+	*/
+
 	variables._jars = [];
 	variables._ext = {};
 	
