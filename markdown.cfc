@@ -21,7 +21,7 @@ component{
 	* @hint lists jars in our java directory
 	*/
 	public void function readJars(){
-		local.jars = directoryList(expandPath("java"), false, "name");
+		local.jars = directoryList("java", false, "name");
 		local.jars = arrayMap(local.jars, function(jar){
 			return "java/" & jar;
 		});
